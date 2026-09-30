@@ -4,76 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sticky Milk | Warung Susu Lekit</title>
-  <meta name="description" content="Sticky Milk - fresh milk drinks by Warung Susu Lekit. Pistachio and Chocolate, RM5.">
+  <meta name="description" content="Sticky Milk — fresh milk drinks by Warung Susu Lekit. Four flavour options, RM5 per cup.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="nav">
-    <a class="brand" href="#home">STICKY MILK</a>
-    <nav>
+    <a class="brand" href="#home" aria-label="Sticky Milk home"><span>STICKY</span> MILK</a>
+    <nav aria-label="Main navigation">
       <a href="#home">Home</a>
       <a href="#flavours">Flavours</a>
       <a href="#about">About</a>
+      <a href="#location">Location</a>
       <a href="#order">Order</a>
     </nav>
-    <a class="nav-order" href="#order">Order Now</a>
+    <a class="nav-order" href="#order">Order Now <span>↗</span></a>
   </header>
 
   <main>
     <section id="home" class="hero">
       <div class="hero-copy">
-        <span class="eyebrow">3 BROTHER'S • FRESH MILK</span>
-        <h1>Seteguk Lekit,<br><em>Sejuta Nikmat.</em></h1>
-        <p>Fresh, creamy and delicious Sticky Milk in four flavours made for your everyday sweet moment.</p>
+        <div class="mini-badge"><span class="dot"></span> FRESH MILK • RM5</div>
+        <span class="eyebrow">3 BROTHER'S • WARUNG SUSU LEKIT</span>
+        <h1><span class="sr-only">A Sticky Sip, </span>One Sip, One Million <em>Delights.</em></h1>
+        <p>Fresh, creamy and delicious — Sticky Milk comes in four flavours, perfect for relaxing, class breaks or hanging out with friends.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="#order">Order Now</a>
+          <a class="btn primary" href="#order" >Order Now <span>→</span></a>
           <a class="btn secondary" href="#flavours">View Flavours</a>
         </div>
-        <div class="price-pill"><strong>RM5</strong><span>per cup</span></div>
+        <div class="hero-meta">
+          <div><strong>RM5</strong><span>per cup</span></div>
+          <i></i>
+          <div><strong>4</strong><span>flavour</span></div>
+          <i></i>
+          <div><strong>100%</strong><span>fresh vibes</span></div>
+        </div>
       </div>
-      <div class="hero-image">
-        <img src="images/product-poster.png" alt="Sticky Milk product poster">
+      <div class="hero-visual">
+        <div class="blob blob-one"></div><div class="blob blob-two"></div>
+        <div class="hero-image">
+          <img src="images/product-poster.png" alt="Sticky Milk product poster">
+        </div>
+        <div class="floating-card"><span>🥛</span><div><b>Sticky Milk</b><small>Fresh & creamy</small></div></div>
+        <div class="floating-price">RM5</div>
       </div>
     </section>
 
-    <section id="flavours" class="section">
+    <section id="flavours" class="section flavours-section">
       <div class="section-heading">
         <span class="eyebrow">OUR FLAVOURS</span>
-        <h2>Pick your favourite.</h2>
-        <p>Simple choices. Big flavour.</p>
+        <h2>Pick your <em>favourite.</em></h2>
+        <p>Four choices. One price. All RM5.</p>
       </div>
-
       <div class="cards">
         <article class="flavour-card pistachio">
-          <div class="flavour-icon">🌿</div>
-          <span class="tag">BEST SELLER</span>
-          <h3>Pistachio</h3>
-          <p>Nutty, creamy and smooth with a rich pistachio taste.</p>
-          <div class="card-bottom"><strong>RM5</strong><button onclick="addItem('Pistachio')">Add to order</button></div>
+          <div class="flavour-top"><div class="flavour-icon">🌿</div><span class="tag">BEST SELLER</span></div>
+          <h3>Pistachio</h3><p>Nutty, creamy and smooth with a rich pistachio flavour.</p>
+          <div class="card-bottom"><strong>RM5</strong><button onclick="addItem('Pistachio')">Add +</button></div>
         </article>
-
         <article class="flavour-card vanilla-blue">
-          <div class="flavour-icon">🫐</div>
-          <span class="tag">NEW FLAVOUR</span>
-          <h3>Vanilla Blue</h3>
-          <p>Sweet, creamy vanilla with a fun blue twist.</p>
-          <div class="card-bottom"><strong>RM5</strong><button onclick="addItem('Vanilla Blue')">Add to order</button></div>
+          <div class="flavour-top"><div class="flavour-icon">🫐</div><span class="tag">NEW</span></div>
+          <h3>Vanilla Blue</h3><p>Sweet and creamy vanilla with a fun blue twist.</p>
+          <div class="card-bottom"><strong>RM5</strong><button onclick="addItem('Vanilla Blue')">Add +</button></div>
         </article>
-
         <article class="flavour-card chocolate">
-          <div class="flavour-icon">🍫</div>
-          <span class="tag">CLASSIC</span>
-          <h3>Chocolate</h3>
-          <p>Rich chocolate flavour blended with fresh milk.</p>
-          <div class="card-bottom"><strong>RM5</strong><button onclick="addItem('Chocolate')">Add to order</button></div>
+          <div class="flavour-top"><div class="flavour-icon">🍫</div><span class="tag">CLASSIC</span></div>
+          <h3>Chocolate</h3><p>Rich, smooth chocolate flavour that pairs perfectly with fresh milk.</p>
+          <div class="card-bottom"><strong>RM5</strong><button onclick="addItem('Chocolate')">Add +</button></div>
         </article>
-
         <article class="flavour-card strawberry-tart">
-          <div class="flavour-icon">🍓</div>
-          <span class="tag">NEW FLAVOUR</span>
-          <h3>Strawberry Tart</h3>
-          <p>Sweet strawberry flavour with a creamy dessert-inspired taste.</p>
-          <div class="card-bottom"><strong>RM5</strong><button onclick="addItem('Strawberry Tart')">Add to order</button></div>
+          <div class="flavour-top"><div class="flavour-icon">🍓</div><span class="tag">NEW</span></div>
+          <h3>Strawberry Tart</h3><p>Sweet strawberry with a creamy, dessert-like taste.</p>
+          <div class="card-bottom"><strong>RM5</strong><button onclick="addItem('Strawberry Tart')">Add +</button></div>
         </article>
       </div>
     </section>
@@ -81,15 +85,43 @@
     <section id="about" class="about section">
       <div class="about-image">
         <img src="images/logo.png" alt="Warung Susu Lekit logo">
+        <div class="image-caption"><span>🥛</span><b>Warung Susu Lekit</b><small>A Sticky Sip, A Million Delights</small></div>
       </div>
       <div class="about-copy">
         <span class="eyebrow">ABOUT US</span>
-        <h2>Made with fresh milk. Served with love.</h2>
-        <p>Sticky Milk is a fresh milk drink from Warung Susu Lekit, created to give you a creamy and satisfying drink at an affordable price.</p>
+        <h2>Simple drink.<br><em>Big mood.</em></h2>
+        <p>Sticky Milk is a fresh milk drink from Warung Susu Lekit — made to be creamy, delicious and budget-friendly.</p>
         <div class="features">
           <div><b>🥛 Fresh Milk</b><span>Creamy & refreshing</span></div>
-          <div><b>💰 RM5</b><span>Student-friendly price</span></div>
-          <div><b>❤️ Made with Care</b><span>Prepared for every order</span></div>
+          <div><b>💸 RM5</b><span>Budget-friendly</span></div>
+          <div><b>❤️ Made with Care</b><span>For every order</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="location" class="location section">
+      <div class="section-heading">
+        <span class="eyebrow">COME & VISIT US</span>
+        <h2>Find us <em>here.</em></h2>
+        <p>Visit Sticky Milk at TVETMARA Lumut.</p>
+      </div>
+      <div class="location-card">
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps?q=TVETMARA%20Lumut%2C%20Jalan%20Dato%20Seri%20Kamaruddin%2C%20Institut%20Kemahiran%20Mara%20Lumut%2C%2032040%20Seri%20Manjung%2C%20Perak&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="TVETMARA Lumut location">
+          </iframe>
+          <div class="map-label"><span>📍</span><div><b>TVETMARA Lumut</b><small>Seri Manjung, Perak</small></div></div>
+        </div>
+        <div class="location-info">
+          <span class="location-icon">📍</span>
+          <span class="eyebrow">OUR LOCATION</span>
+          <h3>TVETMARA Lumut</h3>
+          <p>Jalan Dato Seri Kamaruddin,<br>Institut Kemahiran MARA Lumut,<br>32040 Seri Manjung, Perak.</p>
+          <div class="location-pills"><span>📌 Easy to find</span><span>🚗 Walk-ins welcome</span></div>
+          <a class="btn primary full" href="https://www.google.com/maps/search/?api=1&query=TVETMARA%20Lumut%2C%20Jalan%20Dato%20Seri%20Kamaruddin%2C%20Institut%20Kemahiran%20Mara%20Lumut%2C%2032040%20Seri%20Manjung%2C%20Perak" target="_blank" rel="noopener">Open Google Maps ↗</a>
         </div>
       </div>
     </section>
@@ -97,82 +129,26 @@
     <section id="order" class="order section">
       <div class="section-heading">
         <span class="eyebrow">ORDER NOW</span>
-        <h2>Get your Sticky Milk.</h2>
-        <p>Choose your flavour and quantity. Your order message will be prepared automatically.</p>
+        <h2>Get your <em>Sticky Milk.</em></h2>
+        <p>Choose your flavours and quantities, then tap WhatsApp — your order message will be prepared automatically.</p>
       </div>
-
       <div class="order-box">
-        <div class="order-row">
-          <div>
-            <strong>Pistachio</strong>
-            <span>RM5 each</span>
-          </div>
-          <div class="qty">
-            <button onclick="changeQty('Pistachio', -1)">−</button>
-            <span id="qty-Pistachio">0</span>
-            <button onclick="changeQty('Pistachio', 1)">+</button>
-          </div>
-        </div>
-
-        <div class="order-row">
-          <div>
-            <strong>Vanilla Blue</strong>
-            <span>RM5 each</span>
-          </div>
-          <div class="qty">
-            <button onclick="changeQty('Vanilla Blue', -1)">−</button>
-            <span id="qty-Vanilla Blue">0</span>
-            <button onclick="changeQty('Vanilla Blue', 1)">+</button>
-          </div>
-        </div>
-
-        <div class="order-row">
-          <div>
-            <strong>Chocolate</strong>
-            <span>RM5 each</span>
-          </div>
-          <div class="qty">
-            <button onclick="changeQty('Chocolate', -1)">−</button>
-            <span id="qty-Chocolate">0</span>
-            <button onclick="changeQty('Chocolate', 1)">+</button>
-          </div>
-        </div>
-
-        <div class="order-row">
-          <div>
-            <strong>Strawberry Tart</strong>
-            <span>RM5 each</span>
-          </div>
-          <div class="qty">
-            <button onclick="changeQty('Strawberry Tart', -1)">−</button>
-            <span id="qty-Strawberry Tart">0</span>
-            <button onclick="changeQty('Strawberry Tart', 1)">+</button>
-          </div>
-        </div>
-
-        <div class="total">
-          <span>Total</span>
-          <strong id="total">RM0</strong>
-        </div>
-
-        <button class="whatsapp" onclick="orderWhatsApp()">Order via WhatsApp</button>
-        <small class="note">Important: replace the WhatsApp number in <code>script.js</code> before publishing.</small>
+        <div class="order-title"><span>🛒</span><div><b>Your order</b><small>RM5 per cup</small></div></div>
+        <div class="order-row"><div><strong>Pistachio</strong><span>RM5 each</span></div><div class="qty"><button onclick="changeQty('Pistachio',-1)">−</button><span id="qty-Pistachio">0</span><button onclick="changeQty('Pistachio',1)">+</button></div></div>
+        <div class="order-row"><div><strong>Vanilla Blue</strong><span>RM5 each</span></div><div class="qty"><button onclick="changeQty('Vanilla Blue',-1)">−</button><span id="qty-Vanilla-Blue">0</span><button onclick="changeQty('Vanilla Blue',1)">+</button></div></div>
+        <div class="order-row"><div><strong>Chocolate</strong><span>RM5 each</span></div><div class="qty"><button onclick="changeQty('Chocolate',-1)">−</button><span id="qty-Chocolate">0</span><button onclick="changeQty('Chocolate',1)">+</button></div></div>
+        <div class="order-row"><div><strong>Strawberry Tart</strong><span>RM5 each</span></div><div class="qty"><button onclick="changeQty('Strawberry Tart',-1)">−</button><span id="qty-Strawberry-Tart">0</span><button onclick="changeQty('Strawberry Tart',1)">+</button></div></div>
+        <div class="total"><span>Total</span><strong id="total">RM0</strong></div>
+        <button class="whatsapp" onclick="orderWhatsApp()">💬 Order via WhatsApp</button>
+        <small class="note">Make sure the WhatsApp number in <code>script.js</code> is updated before publishing.</small>
       </div>
     </section>
   </main>
 
   <footer>
-    <div>
-      <strong>STICKY MILK</strong>
-      <span>Warung Susu Lekit • “Seteguk Lekit, Sejuta Nikmat”</span>
-    </div>
-    <div class="footer-links">
-      <a href="#home">Home</a>
-      <a href="#flavours">Flavours</a>
-      <a href="#order">Order</a>
-    </div>
+    <div><strong>STICKY MILK</strong><span>Warung Susu Lekit • “A Sticky Sip, A Million Delights”</span></div>
+    <div class="footer-links"><a href="#home">Home</a><a href="#flavours">Flavours</a><a href="#location">Location</a><a href="#order">Order</a></div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>

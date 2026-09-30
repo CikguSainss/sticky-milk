@@ -1,7 +1,7 @@
 // ====== CHANGE THIS NUMBER ======
 // Malaysia format WITHOUT + or spaces.
 // Example: 60123456789
-const WHATSAPP_NUMBER = "60142646650";
+const WHATSAPP_NUMBER = "601XXXXXXXXX";
 
 const prices = {
   Pistachio: 5,
@@ -17,15 +17,19 @@ const quantities = {
   "Strawberry Tart": 0
 };
 
+function qtyId(item) {
+  return `qty-${item.replaceAll(" ", "-")}`;
+}
+
 function changeQty(item, amount) {
   quantities[item] = Math.max(0, quantities[item] + amount);
-  document.getElementById(`qty-${item.replaceAll(" ", "-")}`).textContent = quantities[item];
+  document.getElementById(qtyId(item)).textContent = quantities[item];
   updateTotal();
 }
 
 function addItem(item) {
   quantities[item] += 1;
-  document.getElementById(`qty-${item.replaceAll(" ", "-")}`).textContent = quantities[item];
+  document.getElementById(qtyId(item)).textContent = quantities[item];
   updateTotal();
   document.getElementById("order").scrollIntoView({ behavior: "smooth" });
 }
@@ -42,26 +46,26 @@ function orderWhatsApp() {
   const selected = Object.entries(quantities).filter(([_, qty]) => qty > 0);
 
   if (selected.length === 0) {
-    alert("Please choose at least one Sticky Milk.");
+    alert("Please select at least one Sticky Milk.");
     return;
   }
 
   if (WHATSAPP_NUMBER.includes("X")) {
-    alert("Please replace WHATSAPP_NUMBER in script.js with your real WhatsApp number first.");
+    alert("Please enter the real WhatsApp number in script.js first.");
     return;
   }
 
   let total = 0;
-  let message = "Hi Sticky Milk! 👋%0A%0AI would like to order:%0A";
+  const lines = ["Hi Sticky Milk! 👋", "", "Saya nak order:", ""];
 
   selected.forEach(([item, qty]) => {
     const subtotal = qty * prices[item];
     total += subtotal;
-    message += `• ${item} x ${qty} = RM${subtotal}%0A`;
+    lines.push(`• ${item} x ${qty} = RM${subtotal}`);
   });
 
-  message += `%0ATotal: RM${total}%0A%0AThank you!`;
-
+  lines.push("", `Total: RM${total}`, "", "Terima kasih! 🥛");
+  const message = encodeURIComponent(lines.join("\n"));
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
 }
 
