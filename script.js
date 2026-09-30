@@ -1,7 +1,7 @@
 // ====== CHANGE THIS NUMBER ======
 // Malaysia format WITHOUT + or spaces.
 // Example: 60123456789
-const WHATSAPP_NUMBER = "601XXXXXXXXX";
+const WHATSAPP_NUMBER = "60142646650";
 
 const prices = {
   Pistachio: 5,
