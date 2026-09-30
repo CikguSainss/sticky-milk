@@ -13,7 +13,7 @@ This version keeps the original Sticky Milk content and adds:
 
 IMPORTANT:
 Open script.js and replace:
-const WHATSAPP_NUMBER = "601XXXXXXXXX";
+const WHATSAPP_NUMBER = "60142646650";
 with the real Malaysia WhatsApp number, without + or spaces.
 
 Example:
